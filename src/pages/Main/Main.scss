@@ -1,0 +1,386 @@
+$borderColor: #dedede;
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  align-items: $align;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
+
+@mixin background($image, $size, $repeat, $position) {
+  background-image: $image;
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $position;
+}
+.wrap {
+  @include flex(column, center, center);
+}
+
+.nav {
+  display: flex;
+  /* justify-content: center; */
+  height: 100px;
+  margin-right: 150px;
+  font-family: "Lobster", cursive;
+}
+
+.navInputWrap {
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  margin-top: 27px;
+}
+
+.instaTitle {
+  font-size: 30px;
+  margin-top: 7px;
+}
+
+.search {
+  display: flex;
+  margin: 10px 190px 0px 190px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  border: 1px solid #cccfca;
+  height: 30px;
+}
+
+#ul {
+  height: 300px;
+  width: 100px;
+}
+
+.navInputWrap,
+.navInputImgs {
+  display: flex;
+  flex-direction: row;
+}
+
+.imgInstaLogo {
+  margin-left: 100px;
+  margin-right: 40px;
+
+  background-image: url("../../assets/Main/instalogo.png");
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-right: 2px solid black;
+  padding-right: 90px;
+}
+
+.navInputLetter {
+  display: flex;
+}
+
+.nav-input-imgs {
+  margin-right: 250px;
+}
+
+.imgNavigation {
+  width: 40px;
+  margin-right: 30px;
+  background-image: url("./../../assets/Main/navigation.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.imgHeart {
+  width: 39px;
+  margin-right: 30px;
+  background-image: url("./../../assets/Main/heart.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.imgInfo {
+  width: 39px;
+
+  background-image: url("./../../assets/Main/profile.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main {
+  @include flex(row, center, center);
+  background-color: #fafafa;
+  border: 1px solid #d6dce2;
+}
+
+.feeds {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e6e6e6;
+  background-color: white;
+  width: 600px;
+}
+.feedsHeader {
+  @include flex(row, space-between, center);
+  height: 100px;
+}
+
+.feedsBoth {
+  display: flex;
+}
+
+.feedsProfile {
+  margin-left: 30px;
+  background-image: url(./../../assets/Main/door.avif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.name {
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+.feedsDot {
+  margin-top: 20px;
+  margin-right: 15px;
+  width: 30px;
+  height: 30px;
+  background-image: url(./../../assets/Main/dot.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.imgArticle {
+  // border-top: 1px solid #cccfca;
+  height: 457px;
+  background-image: url(./../../assets/Main/beach.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feedsComments {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 70px;
+  // width: 600px;
+}
+
+.imgs {
+  margin-top: -30px;
+  display: flex;
+}
+.imgHeart {
+  @include background(
+    url("./../../assets/Main/heart.png"),
+    contain,
+    no-repeat,
+    center
+  );
+  width: 30px;
+  margin-right: 30px;
+}
+
+.imgComment {
+  width: 30px;
+  @include background(
+    url("./../../assets/Main/2.png"),
+    contain,
+    no-repeat,
+    center
+  );
+}
+
+.imgShare {
+  width: 50px;
+  height: 30px;
+  @include background(
+    url("./../../assets/Main/down.png"),
+    contain,
+    no-repeat,
+    center
+  );
+}
+
+.asideLike {
+  margin-top: -40px;
+}
+
+.commentWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftComment {
+  @include flex(row, space-between, center);
+
+  border-top: 1px solid #cccfca;
+}
+
+.inputComment {
+  margin-top: 15px;
+  border: none;
+  width: 90%;
+  height: 50px;
+}
+
+.inputBtn {
+  margin-top: 15px;
+  border: none;
+  background-color: white;
+  color: #67b6fa;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.mainRight {
+  margin-top: 60px;
+  margin-right: 300px;
+  margin-left: 50px;
+  height: 800px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightFirst {
+  display: flex;
+  height: 70px;
+}
+
+.rightHeader {
+  @include background(
+    url("./../../assets/Main/wecode.png"),
+    contain,
+    no-repeat,
+    center
+  );
+  width: 100px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+}
+
+.letter {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.rightStory {
+  height: 250px;
+  background-color: white;
+  border: 1px solid #cccfca;
+  margin-bottom: 15px;
+  border-radius: 7px;
+
+  justify-content: center;
+}
+
+.storyAll,
+.recommendAll {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rightProfile {
+  display: flex;
+}
+
+.imgProfiles {
+  @include background(
+    url("./../../assets/Main/IMG_0003.jpg"),
+    contain,
+    no-repeat,
+    center
+  );
+
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
+}
+
+.profileNickName {
+  display: flex;
+  flex-direction: column;
+}
+
+.rightRecommend {
+  height: 200px;
+  background-color: white;
+  border: 1px solid #cccfca;
+  border-radius: 7px;
+}
+
+.nickname {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.minute {
+  margin-left: 5px;
+  margin-top: -13px;
+  color: #cccfca;
+}
+
+.recommendProfiles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imgRecommend {
+  @include background(
+    url("./../../assets/Main/IMG_0006.jpg"),
+    contain,
+    no-repeat,
+    center
+  );
+
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
+}
+
+.recommendNickname {
+  margin-left: -39px;
+}
+
+.follow {
+  color: #67b6fa;
+  margin-right: 26px;
+  font-weight: bold;
+}
+
+.minute {
+  margin-left: 5px;
+  margin-top: -13px;
+  color: #cccfca;
+}
+.seeAll {
+  font-weight: 600;
+  margin-right: -17px;
+}
+
+.story {
+  color: #cccfca;
+  margin-left: 10px;
+}
+
+.nickRecommend {
+  margin-top: 7px;
+  font-weight: bold;
+  margin-left: -40px;
+}
+.knowRecommend {
+  margin-top: -13px;
+  margin-left: -40px;
+  color: #cccfca;
+}

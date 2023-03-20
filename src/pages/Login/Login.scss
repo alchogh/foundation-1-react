@@ -1,0 +1,50 @@
+$borderColor: #dedede;
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  align-items: $align;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
+
+.loginForm {
+  @include flex(column, center, center);
+  margin: 100px auto;
+
+  padding: 0;
+  width: 400px;
+  height: 60vh;
+  border: 1px solid $borderColor;
+}
+
+.title {
+  margin-top: -20px;
+  font-family: "Lobster", cursive;
+  font-size: 60px;
+}
+
+.id,
+.pw {
+  width: 300px;
+  margin-top: 8px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #fafafa;
+  color: rgba(152, 152, 152, 255);
+  border: 1px solid $borderColor;
+}
+.loginBtn {
+  margin-top: 13px;
+  height: 40px;
+  width: 312px;
+  border-radius: 5px;
+  border: $borderColor;
+  background-color: rgba(103, 182, 250, 255);
+  &:hover {
+    width: 312px;
+    background-color: #2074f4;
+    cursor: pointer;
+  }
+  color: white;
+  font-weight: bold;
+  margin-bottom: 120px;
+}
